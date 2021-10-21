@@ -14,6 +14,7 @@
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
+  --color-sky-blue: #00abfa;
 
   /*Font size*/
   --font-large: 48px;
@@ -54,6 +55,17 @@ ul {
   padding-left: 0;
 }
 
+li {
+  ist-style: none;
+}
+
+button {
+  background-color: transparent; /*투명한 =transparent*/
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 /*Typography*/ /*텍스트관련 스타일링*/
 h1 {
   font-size: var(--font-large);
@@ -87,7 +99,7 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  background-color: var(--color-sky-blue);
   align-items: center;
   color: var(--color-white);
   padding: 16px;
@@ -117,4 +129,33 @@ p {
 .navbar__menu__item:hover {
   /*마우스를 아이템에 올리면 */
   background-color: var(--color-dark-pink);
+}
+
+/*Home*/
+#home {
+  background: url("imgs/portfoliobackground.png") center/cover no-repeat;
+  padding: 40px;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__descreiption {
+  color: var(--color-white);
+}
+
+.home__contact {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
 }
