@@ -14,7 +14,7 @@
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
-  --color-sky-blue: #00abfa;
+  --color-sky-blue: #02eeff;
 
   /*Font size*/
   --font-large: 48px;
@@ -31,6 +31,9 @@
   /*Size*/
 
   --size-border-radius: 4px;
+
+  /*Animation */
+  --animation-duration: 300ms;
 }
 
 /*Universal tags*/
@@ -158,4 +161,75 @@ p {
   padding: 8px 12px;
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
+}
+
+/*Section common */
+.section {
+  padding: 50px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/*About*/
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.major__icon {
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  margin: auto;
+  color: var(--color-blue);
+  font-size: 70px; /* 이미지를 어썸폰트에서 갖고 왔으니깐 폰트사이즈를 올리면 사진이 커짐*/
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.major__icon:hover i {
+  /*.major__icon:hover i 띄어쓰기 유의*/
+  /*메이저아이콘에 커서가 올라가면 i태그가~*/
+  color: var(--color-dark-grey);
+  transform: rotate(30deg) scale(1.1); /*아이콘에 커서가 올라가면 움직이면서 커져라*/
+}
+
+.major__icon i {
+  /*메이저 아이콘의 i는~*/
+  transition: all var(--animation-duration) ease; /*움직이는 시간은 총 300ms이고 ease로 움직이겠다*/
+}
+
+.major__title,
+.major__description {
+  color: var(--color-dark-grey);
+}
+
+.major__description {
+  font-size: var(--font-small);
+}
+
+.School {
+  display: flex;
+  align-items: center;
+}
+
+.school__description {
+  margin: 0 16px;
+  text-align: left;
+}
+
+.school__name,
+.school__period {
+  color: var(--color--light-grey);
+}
+
+.school__name {
+  font-size: var(--font-small);
+}
+
+.school__period {
+  font-size: var(--font-micro);
 }
