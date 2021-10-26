@@ -454,7 +454,7 @@ p {
 
 .contact__links {
   font-size: var(--font-large);
-  margin: 24px 0;
+  margin: 24px 10px;
   transition: all var(--animation-duration) ease-in;
 }
 
