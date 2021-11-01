@@ -26,7 +26,19 @@ navbarMenu.addEventListener('click',(event)=>{
         return;
     }else{
         console.log(event.target.dataset.link);
-        const scrollTo= document.querySelector(link);
-        scrollTo.scrollIntoView({behavior: 'smooth'});
+        scrollIntoView(link);
     }
 })
+
+
+//handle click on contact me button on home
+
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', ()=>{
+    scrollIntoView('#contact');
+});//클릭이 된다면
+
+function scrollIntoView(selector){//id를 매개변수로 받아온다
+    const scrollTo= document.querySelector(selector); //이동할곳의 id
+    scrollTo.scrollIntoView({behavior: 'smooth'});//부드럽게 넘어가라
+}
