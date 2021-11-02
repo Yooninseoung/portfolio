@@ -48,11 +48,23 @@ document.addEventListener('scroll', ()=>{
     console.log('home height : ' + homeHeight);
 
     home.style.opacity = 1-window.scrollY/homeHeight;
-})
+});
 
 
+//scroll - arrow up btn set
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', ()=>{
+    if(window.scrollY > homeHeight/2){
+        arrowUp.classList.add('visible');
+    }else{
+        arrowUp.classList.remove('visible');
+    }
+});
 
-
+//arrow up click - top
+arrowUp.addEventListener('click', ()=>{
+    scrollIntoView('#home');
+});
 
 
 

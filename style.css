@@ -15,6 +15,7 @@
   --color-orange: #feb546;
   --color-black: #000000;
   --color-sky-blue: #60ddd7;
+  --color-sand: #ebdc89;
 
   /*Font size*/
   --font-large: 48px;
@@ -480,6 +481,27 @@ p {
 .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-black);
+}
+
+/*arrow up*/
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 50px;
+  width: 70px;
+  height: 70px;
+  color: var(--color-white);
+  background-color: var(--color-sand);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /*For below 768px screen width*/
