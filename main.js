@@ -67,7 +67,31 @@ arrowUp.addEventListener('click', ()=>{
 });
 
 
+//projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e)=>{
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if(filter == null){
+        return;
+    }
 
+
+    projectContainer.classList.add('anim-out');
+    setTimeout(()=>{
+        projects.forEach((projects)=>{ // projects의 요소를 하나씩 가져온다 for문과 비슷함
+            if(filter ==='*' || filter === projects.dataset.type){ //조건에 맞으면
+                projects.classList.remove('invisible'); // 안보여야 하는 이미지를 빼라!
+            }else{ 
+                projects.classList.add('invisible');
+            }
+    
+        });
+
+        projectContainer.classList.remove('anim-out');
+    }, 300);
+});
 
 //함수
 function scrollIntoView(selector){//id를 매개변수로 받아온다

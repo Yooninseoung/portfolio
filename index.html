@@ -177,26 +177,45 @@
         <h1>My Work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-            <button class="category__btn active">ALL<span class="category__count">1</span></button>
-            <button class="category__btn">Front-end<span class="category__count">1</span></button>
-            <button class="category__btn">Back-end<span class="category__count">0</span></button>
-            <button class="category__btn">Mobile<span class="category__count">0</span></button>
+            <button class="category__btn active" data-filter="*">ALL<span class="category__count">4</span></button>
+            <button class="category__btn" data-filter="Front-end">Front-end<span class="category__count">1</span></button>
+            <button class="category__btn" data-filter="Back-end">Back-end<span class="category__count">1</span></button>
+            <button class="category__btn" data-filter="Mobile">Mobile<span class="category__count">2</span></button>
         </div>
 
         <div class="work__projects">
-            <a href="https://blog.naver.com/isyoon2000" class="project" target="blank"><img src="imgs/blogimg.jpg" alt="Blog" class="project__img">
+            
+            <a href="https://blog.naver.com/isyoon2000" class="project" target="blank" data-type="Mobile">
+                <img src="imgs/blogimg.jpg" alt="Blog" class="project__img">
             <div class="project__description">
                 <h3>naver blog</h3>
                 <span>Study</span>
             </div>
             </a>
 
-            <a href="https://gist.github.com/Yooninseoung" class="project" target="blank"><img src="imgs/Git-Icon-Black.png" alt="Git" class="project__img">
+            <a href="https://gist.github.com/Yooninseoung" class="project" target="blank" data-type="Mobile">
+                <img src="imgs/Git-Icon-Black.png" alt="Git" class="project__img">
                 <div class="project__description">
                     <h3>Git</h3>
                     <span>Study Code</span>
                 </div>
                 </a>
+
+                <a href="https://www.naver.com" class="project" target="blank" data-type="Back-end">
+                    <img src="imgs/code.png" alt="EX" class="project__img">
+                    <div class="project__description">
+                        <h3>code</h3>
+                        <span>Study Code</span>
+                    </div>
+                    </a>
+
+                    <a href="https://www.naver.com" class="project" target="blank" data-type="Front-end">
+                        <img src="imgs/portfolioiconCard.png" alt="EX" class="project__img">
+                        <div class="project__description">
+                            <h3>EX</h3>
+                            <span>Study Code</span>
+                        </div>
+                        </a>
         </div>
        </div>
     </section>
