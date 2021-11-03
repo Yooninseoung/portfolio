@@ -133,15 +133,13 @@ p {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-white);
-}
-
-.navbar__menu__item.active {
-  /*메뉴 아이템이면서, 엑티브인 자료는...*/
-  border: 1px solid var(--color-white);
+  border: 2px solid transparent;
+  border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item:hover {
   /*마우스를 아이템에 올리면 */
+  border-color: var(--color-white);
   background-color: var(--color-orange);
 }
 
@@ -326,13 +324,13 @@ p {
   padding: 8px 48px;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
   background-color: var(--color-pink);
   color: var(--color-white);
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1; /*번호를 보이게해줌*/
   top: 0px;
