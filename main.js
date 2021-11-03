@@ -16,6 +16,10 @@ document.addEventListener('scroll', ()=>{
 }) //scroll y좌표 알아내기
 
 
+
+
+
+
 // handle scrolling when taping on navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click',(event)=>{
@@ -25,10 +29,17 @@ navbarMenu.addEventListener('click',(event)=>{
     if(link == null){
         return;
     }else{
+        navbarMenu.classList.remove('open');
         console.log(event.target.dataset.link);
         scrollIntoView(link);
     }
-})
+});
+
+//navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', ()=>{
+navbarMenu.classList.toggle('open');
+});
 
 
 //handle click on contact me button on home
